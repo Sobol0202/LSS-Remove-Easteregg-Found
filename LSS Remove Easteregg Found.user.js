@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         LSS Remove Easteregg Found
 // @namespace    www.leitstellenspiel.de
-// @version      1.1
+// @version      1.2
 // @description  Entfernt die Gefundenmeldung, wenn das Easteregg geklickt wurde.
 // @author       MissSobol
 // @match        https://www.leitstellenspiel.de/*
@@ -17,7 +17,7 @@
         var alertElements = document.querySelectorAll('.alert.fade.in.alert-success');
         alertElements.forEach(function(alertElement) {
             // Überprüfe den Text des Alert-Elements
-            if (alertElement.textContent.includes(' gefunden! Herzlichen Glückwunsch!')) {
+            if (alertElement.textContent.includes(' gefunden!')) {
                 // Wenn der spezifische Text gefunden wurde, entferne das Alert-Element
                 alertElement.remove();
             }
